@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="mD_01" class="dao.member.MemberDao"/>
+   <bean id="pD_01" class="dao.porder.PorderDao"/>
+   <bean id="member_01" class="model.Member"/>
+   <bean id="porder_01" class="model.Porder"/>
+   
+   <bean id="fact" class="controller.Factory">
+		<property name="mD" ref="mD_01"/>
+		<property name="pD" ref="pD_01"/>
+		<property name="member" ref="member_01"/>
+		<property name="porder" ref="porder_01"/>   	
+   </bean>
+   </beans>

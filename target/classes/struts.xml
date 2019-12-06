@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache software fundation//dtd strts configuration 2.5//en"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="Login" class="controller.LoginAction">
+			<result name="success">/member/MemberCC.jsp</result>
+			<result name="CWW">MemberCC_CWW.jsp</result>
+			<result name="error">LoginFail.jsp</result>			
+		</action>
+		<action name="JQLogin" class="controller.LoginAction">
+			<result name="success">JQPorder.jsp</result>	
+			<result name="error">JQAddMember.jsp</result>			
+		</action>
+		<action name="AddMember" class="controller.AddMemberAction">
+			<result name="success">AddMemberOK.jsp</result>	
+			<result name="error">AddMemberError.jsp</result>			
+		</action>		
+	</package>
+</struts>
