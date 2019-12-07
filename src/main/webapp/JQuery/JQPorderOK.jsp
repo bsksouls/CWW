@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=BIG5"
     pageEncoding="BIG5"
     import="model.Member"
-    import="model.Porder"%>
+    import="model.Porder" 
+    import="dao.porder.PorderDao"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,42 +24,35 @@ tr:nth-child(even) {
 <body>
 <%
 Member m = (Member) session.getAttribute("member");
-Porder p = new Porder();
-p.setName(m.getName());
-Integer pro1 = Integer.parseInt(request.getParameter("pro1"));
-Integer pro2 = Integer.parseInt(request.getParameter("pro2"));
-Integer pro3 = Integer.parseInt(request.getParameter("pro3"));
-p.setPro1(pro1);
-p.setPro2(pro2);
-p.setPro3(pro3);
-Integer sum = p.getSum();
-session.setAttribute("porder", p);
+Porder pok = (Porder)session.getAttribute("porder");
+new PorderDao().add(pok);
 %>
 	<div data-role="header" data-position="fixed">
 		<h1>選擇商品</h1>
 	</div>
-	
 	<div data-role="context">
-		<form action="JQPorderOK.jsp" method="post">
 			<table>
 				<tr>
 					<td>
 						<img src="../pic/pro1.jpg">
 					<td>
-						<%=pro1%> 杯
+						<%=pok.getPro1() %> 杯
 				<tr>
 					<td>
 						<img src="../pic/pro2.jpg">
 					<td>
-						<%=pro2%> 杯
+						<%=pok.getPro2() %> 杯
 				<tr>
 					<td>
 						<img src="../pic/pro3.jpg">
 					<td>
-						<%=pro3%> 杯				 
+						<%=pok.getPro3() %> 杯	
+				<tr>
+					<td>總金額						
+					<td>
+						<%=pok.getSum() %> 元					 
 			</table>	
-			<input type="submit" value="確認訂單">
-		</form>
+			<a href="/gjun/JQuery/JQindex.jsp" class="ui-btn">回首頁</a>
 	</div>
 	
 	<div data-role="footer" data-position="fixed">

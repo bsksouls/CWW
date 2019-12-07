@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=BIG5"
-    pageEncoding="BIG5"%>
+    pageEncoding="BIG5"
+    import="model.Member"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,14 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
+<%
+Member m = (Member) session.getAttribute("member");;
+try{
+	m.getName();
+}catch(NullPointerException e){
+	request.getRequestDispatcher("JQLogin.jsp").forward(request,response);
+}
+%>
 <body>
 <div data-role="header" data-position="fixed">
 		<h1>選擇商品</h1>
@@ -58,10 +67,11 @@
 			<input type="submit" value="送出">
 			<input type="reset" value="重置">
 		</form>
+		<a href="/gjun/JQuery/JQindex.jsp" class="ui-btn">回首頁</a>
 	</div>
 	
 	<div data-role="footer" data-position="fixed">
-		<h4>JQuery mobile</h4>
+		<jsp:include page="../footer.jsp" />
 	</div>
 </body>
 </html>

@@ -17,11 +17,11 @@
 	<div data-role="context">
 		<a href="JQLogin.jsp" class="ui-btn">µn¤J</a>
 		<a href="JQAddMember.jsp" class="ui-btn">µù¥U</a>
-		<a href="JQLogin.jsp" class="ui-btn">ÁÊª«</a>
+		<a href="JQPorder.jsp" class="ui-btn">ÁÊª«</a>
 	</div>
 	
 	<div data-role="footer" data-position="fixed">
-		<h4>JQuery mobile</h4>
+		<jsp:include page="../footer.jsp" />
 	</div>
 </body>
 </html>

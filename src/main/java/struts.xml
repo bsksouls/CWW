@@ -17,6 +17,10 @@
 		<action name="AddMember" class="controller.AddMemberAction">
 			<result name="success">AddMemberOK.jsp</result>	
 			<result name="error">AddMemberError.jsp</result>			
+		</action>
+		<action name="JQAddMember" class="controller.AddMemberAction">
+			<result name="success">JQAddMemberOK.jsp</result>	
+			<result name="error">JQAddMemberError.jsp</result>			
 		</action>		
 	</package>
 </struts>

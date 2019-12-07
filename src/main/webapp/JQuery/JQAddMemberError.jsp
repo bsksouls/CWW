@@ -4,22 +4,18 @@
 <html>
 <head>
 <meta charset="BIG5">
-<title>會員登入</title>
+<title>會員註冊</title>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 	<div data-role="header" data-position="fixed">
-		<h1>會員登入</h1>
+		<h1>會員註冊</h1>
 	</div>
-	
 	<div data-role="context">
-		<form action="JQLogin" method="post">
-			帳號:<input type="text" name="user">
-			密碼:<input type="password" name="password">
-			<input type="submit" value="送出">
-		</form>
+		註冊失敗!帳號重複!
+		<a href="JQAddMember.jsp" class="ui-btn">重新註冊</a>
 		<a href="/gjun/JQuery/JQindex.jsp" class="ui-btn">回首頁</a>
 	</div>
 	

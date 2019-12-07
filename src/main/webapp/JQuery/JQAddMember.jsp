@@ -15,7 +15,7 @@
 	</div>
 	
 	<div data-role="context">
-		<form action="JQLogin" method="post">
+		<form action="JQAddMember" method="post">
 			±b¸¹:<input type="text" name="user">
 			±K½X:<input type="password" name="password">
 			©m¦W:<input type="text" name="name">
@@ -27,7 +27,7 @@
 	</div>
 	
 	<div data-role="footer" data-position="fixed">
-		<h4>JQuery mobile</h4>
+		<jsp:include page="../footer.jsp" />
 	</div>
 </body>
 </html>
